@@ -132,7 +132,7 @@ const HearingComponent = () => {
                 <div className="flex flex-wrap gap-4 items-center justify-center p-4">
                     {
                         keys.map((item, index) => (
-                            <button onClick={() => { handleSubmit(item) }} className="border-gray-200 border-b-4 border-r-4 active:border-b-0 active:border-r-0 transition-all ease-in-out px-8 py-4 text-lg rounded-full bg-gray-100 " key={index}>{item}</button>
+                            <button onClick={() => { handleSubmit(item) }} className="border-gray-200 border-b-4 border-r-4 active:border-b-0 active:border-r-0 transition-all ease-in-out px-8 py-4 text-lg rounded-full bg-gray-50 " key={index}>{item}</button>
                         ))
                     }
                 </div>
