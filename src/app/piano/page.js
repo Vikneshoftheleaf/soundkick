@@ -1,8 +1,8 @@
 import PracticePiano from "@/components/piano"
 
 export const metadata = {
-    title: "Practise Piano",
-    description: "Tune You Ears with Piano",
+    title: "Practice Piano",
+    description: "Tune Your Ears with Piano",
   };
 
 export default function Piano()

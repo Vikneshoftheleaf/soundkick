@@ -136,7 +136,7 @@ const HearingComponent = () => {
                         ))
                     }
                 </div>
-                <Link href={'/piano'} className="text-cente"> <u>Practise Piano</u></Link>
+                <Link href={'/piano'} className="text-cente"> <u>Practice Piano</u></Link>
 
             </div>
 
