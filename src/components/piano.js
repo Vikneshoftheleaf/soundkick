@@ -36,7 +36,7 @@ const PracticePiano = () => {
             </div>
 }
       <div className={styles.pianoWrapper}>
-        <SoundfontProvider
+        <SoundfontProvider className="w-full h-full"
           instrumentName="acoustic_grand_piano"
           hostname="https://d1pzp51pvbm36p.cloudfront.net"
           render={({ isLoading, playNote, stopNote }) => (

@@ -5,7 +5,7 @@ import { MidiNumbers } from "react-piano";
 import SoundfontProvider from "@/util/soundProvider";
 import Link from "next/link";
 const HearingComponent = () => {
-    const keys = ["C4", "D4", "E4", "F4", "G4", "A4", "B4", "Db4", "Eb4", "Gb4", "Ab4", "Bb4"]
+    const keys = ["C4", "D4", "E4", "F4", "G4", "A4", "B4", "Db4", "Eb4", "Gb4", "Ab4", "Bb4","C5"]
     const [targetNote, setTargetNote] = useState(null);
     const [soundfont, setSoundfont] = useState(null);
     const [ans, setAns] = useState(null)
@@ -30,16 +30,22 @@ const HearingComponent = () => {
     };
 
     function handleSubmit(key) {
+        if (targetNote && targetNote.note)
+        {
+            if (ans == null) {
 
-        if (ans == null) {
 
-            if (key == targetNote.note) {
-                setAns(true)
+                if (key == targetNote.note) {
+                    setAns(true)
+                }
+                else {
+                    setAns(false)
+                }
             }
-            else {
-                setAns(false)
-            }
+
         }
+
+        
 
     }
     useEffect(()=>{
@@ -72,7 +78,7 @@ const HearingComponent = () => {
                     }}
                 />
 
-                <button onClick={getRandomNote} className="p-4 rounded-lg bg-blue-500 text-white ">
+                <button onClick={getRandomNote} className="border-blue-800 active:border-b-0 active:border-r-0 transition-all ease-in-out  border-b-4 border-r-4 p-4 rounded-lg bg-blue-500 text-white ">
                     <span>
                         <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-volume-up-fill" viewBox="0 0 16 16">
                             <path d="M11.536 14.01A8.47 8.47 0 0 0 14.026 8a8.47 8.47 0 0 0-2.49-6.01l-.708.707A7.48 7.48 0 0 1 13.025 8c0 2.071-.84 3.946-2.197 5.303z" />
@@ -122,15 +128,16 @@ const HearingComponent = () => {
             </div>
 
 
-            <div className="fixed lg:bottom-40 bottom-10 left-0 right-0">
+            <div className="fixed lg:bottom-40 bottom-10 left-0 right-0 flex flex-col items-center">
                 <div className="flex flex-wrap gap-4 items-center justify-center p-4">
                     {
                         keys.map((item, index) => (
-                            <button onClick={() => { handleSubmit(item) }} className="px-8 py-4 text-lg rounded-full bg-gray-100 outline-dashed outline-gray-200" key={index}>{item}</button>
+                            <button onClick={() => { handleSubmit(item) }} className="border-gray-200 border-b-4 border-r-4 active:border-b-0 active:border-r-0 transition-all ease-in-out px-8 py-4 text-lg rounded-full bg-gray-100 " key={index}>{item}</button>
                         ))
                     }
-                    <Link href={'/piano'}> <u>Practise Piano</u></Link>
                 </div>
+                <Link href={'/piano'} className="text-cente"> <u>Practise Piano</u></Link>
+
             </div>
 
         </div>
