@@ -5,7 +5,7 @@ import { MidiNumbers } from "react-piano";
 import SoundfontProvider from "@/util/soundProvider";
 import Link from "next/link";
 const HearingComponent = () => {
-    const keys = ["C4", "D4", "E4", "F4", "G4", "A4", "B4", "Db4", "Eb4", "Gb4", "Ab4", "Bb4","C5"]
+    const keys = ["C4", "Db4","D4","Eb4","E4","F4", "Gb4","G4","Ab4", "A4","Bb4", "B4","C5"]
     const [targetNote, setTargetNote] = useState(null);
     const [soundfont, setSoundfont] = useState(null);
     const [ans, setAns] = useState(null)
