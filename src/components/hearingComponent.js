@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import { MidiNumbers } from "react-piano";
 import SoundfontProvider from "@/util/soundProvider";
-
+import Link from "next/link";
 const HearingComponent = () => {
     const keys = ["C4", "D4", "E4", "F4", "G4", "A4", "B4", "Db4", "Eb4", "Gb4", "Ab4", "Bb4"]
     const [targetNote, setTargetNote] = useState(null);
@@ -51,7 +51,7 @@ const HearingComponent = () => {
     return (
         <div className="flex w-screen justify-center">
 
-            <div className="pt-60">
+            <div className="lg:pt-48 p-36">
                 <SoundfontProvider
                     instrumentName="acoustic_grand_piano"
                     hostname="https://d1pzp51pvbm36p.cloudfront.net"
@@ -110,13 +110,14 @@ const HearingComponent = () => {
             </div>
 
 
-            <div className="fixed lg:bottom-40 bottom-20 left-0 right-0">
+            <div className="fixed lg:bottom-40 bottom-10 left-0 right-0">
                 <div className="flex flex-wrap gap-4 items-center justify-center p-4">
                     {
                         keys.map((item, index) => (
                             <button onClick={() => { handleSubmit(item) }} className="px-8 py-4 text-lg rounded-full bg-gray-100 outline-dashed outline-gray-200" key={index}>{item}</button>
                         ))
                     }
+                    <Link href={'/piano'}> <u>Practise Piano</u></Link>
                 </div>
             </div>
 
