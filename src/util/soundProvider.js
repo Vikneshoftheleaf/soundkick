@@ -46,6 +46,7 @@ class SoundfontProvider extends Component {
           this.state.instrument.stop(midiNumber);
         }
       },
+      
     });
   }
 }
