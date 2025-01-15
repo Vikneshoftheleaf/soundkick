@@ -124,6 +124,7 @@ export default function SingingPitchDetector() {
   const [difference, setDifference] = useState(0);
   const audioContextRef = useRef(null);
   const analyserNodeRef = useRef(null);
+  const streamRef = useRef(null);
 
   const startListening = async () => {
     if (isListening) return; // Prevent multiple starts
@@ -131,6 +132,7 @@ export default function SingingPitchDetector() {
 
     try {
       const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+      streamRef.current = stream;
       const audioContext = new (window.AudioContext || window.webkitAudioContext)();
       const source = audioContext.createMediaStreamSource(stream);
       const analyserNode = Meyda.createMeydaAnalyzer({
@@ -168,6 +170,9 @@ export default function SingingPitchDetector() {
   };
 
   const stopListening = () => {
+    if (streamRef.current) {
+      streamRef.current.getTracks().forEach((track) => track.stop());
+    }
     if (analyserNodeRef.current) {
       analyserNodeRef.current.stop();
     }
