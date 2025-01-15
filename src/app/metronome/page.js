@@ -1,10 +1,10 @@
-import MetronomeComponent from "@/components/metronomeComponent"
+import MComponent from "@/components/mComponent"
 export const metadata = {
     "title": "Metronome",
     "description":"Practice singing with metronome!"
 }
 export default function Metronome(){
     return(
-        <MetronomeComponent/>
+        <MComponent/>
     )
 }

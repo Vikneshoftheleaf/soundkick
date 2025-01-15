@@ -2,7 +2,7 @@
 import { useState } from "react";
 import * as Tone from "tone";
 
-export default function MetronomeComponent() {
+export default function MComponent() {
     const [bpm, setBpm] = useState(120); // Default BPM
     const [isPlaying, setIsPlaying] = useState(false);
 
