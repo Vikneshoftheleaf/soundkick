@@ -124,7 +124,7 @@ const FeedbackForm = ({ apiUrl }) => {
                 <p className='text-xs'>To submit another Feedback, Refresh the page!</p>
                 <button
                   type="button"
-                  onClick={() => setIsOpen(false)}
+                  onClick={() => {setIsOpen(false);setsended(false)}}
                   className="bg-gray-300 text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-400 transition-all"
                 >
                   Close
