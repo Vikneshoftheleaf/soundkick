@@ -3,7 +3,6 @@ import "./globals.css";
 import FeedbackForm from "@/components/feebackForm";
 const inter = Inter({ subsets: ["latin"] });
 
-
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
