@@ -36,9 +36,11 @@ class SoundfontProvider extends Component {
   render() {
     return this.props.render({
       isLoading: !this.state.instrument,
-      playNote: (midiNumber) => {
+      playNote: (midiNumber, gain = 10) => {
         if (this.state.instrument) {
-          this.state.instrument.play(midiNumber);
+          this.state.instrument.play(midiNumber, null, {
+            gain, // Set the volume using the gain parameter
+          });
         }
       },
       stopNote: (midiNumber) => {

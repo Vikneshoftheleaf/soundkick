@@ -18,6 +18,6 @@ function MyApp({ Component, pageProps }) {
       <Component {...pageProps} />
     </>
   );
-}
+}x
 
 export default MyApp;

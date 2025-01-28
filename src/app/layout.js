@@ -10,7 +10,7 @@ export default function RootLayout({ children }) {
       <head>
       <Script
           async
-          src="https://www.googletagmanager.com/gtag/js?id=G-8EVDXJH2SJ"
+          src="https://www.googletagmanager.com/gtag/js?id=G-F59CXC13QW"
         />
 
         <Script id="google-analytics">
@@ -18,7 +18,7 @@ export default function RootLayout({ children }) {
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
-              gtag('config','G-8EVDXJH2SJ'});
+              gtag('config','G-F59CXC13QW'});
           `}
         </Script>
       <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css" rel="stylesheet" />
