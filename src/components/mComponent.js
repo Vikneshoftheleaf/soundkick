@@ -3,7 +3,7 @@ import { useState, useEffect, useRef } from "react";
 import * as Tone from "tone";
 
 export default function MComponent() {
-  const [bpm, setBpm] = useState(120); // Default BPM
+  const [bpm, setBpm] = useState(140); // Default BPM
   const [isPlaying, setIsPlaying] = useState(false);
   const tickSoundRef = useRef(null); // To hold the tick sound instance
   const clockRef = useRef(null); // To hold the clock instance
