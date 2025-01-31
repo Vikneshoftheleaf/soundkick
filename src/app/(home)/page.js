@@ -12,7 +12,7 @@ export default function HomePage() {
   return (
     <div className="min-h-screen flex flex-col">
       {/* Header */}
-      <NavBar />
+      
 
       {/* Hero Section */}
       <section className="bg-blue-100 text-center py-16 px-4 flex flex-col items-center">
